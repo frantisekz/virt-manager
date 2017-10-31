@@ -520,10 +520,7 @@ class _OsVariant(object):
             return "vga"
 
         if guest.has_spice() and guest.os.is_x86():
-            if guest.has_gl():
-                return "virtio"
-            else:
-                return "qxl"
+            return "virtio"
 
         if self.is_windows():
             return "vga"
